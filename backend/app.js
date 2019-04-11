@@ -1,8 +1,10 @@
+/** Module imports **/
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 
+/** Relative imports **/
 const indexRouter = require('./routes/index');
 
 const app = express();

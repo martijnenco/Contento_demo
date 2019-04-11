@@ -1,9 +1,11 @@
 /** Module imports **/
 import React, {Component} from 'react';
 import ListItem from "@material-ui/core/ListItem";
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import Button from "@material-ui/core/Button";
+import Avatar from "@material-ui/core/Avatar";
 
 class Suggestions extends Component {
   constructor(props) {
@@ -52,13 +54,23 @@ class Suggestions extends Component {
     return (
       <>
         {items && items.map(suggestion =>
-          <ListItem key={suggestion.id}>
+          <ListItem alignItems={'alignItems'} key={suggestion.id}>
+            <ListItemAvatar className={'images'}>
+              <Avatar alt="Image" src={suggestion.image} />
+            </ListItemAvatar>
             <ListItemText
               className={'list-text'}
               primary={suggestion.title}
-              secondary={suggestion.body}>
+              secondary={suggestion.body}
+            >
             </ListItemText>
             <ListItemSecondaryAction>
+              <Button
+                variant="contained"
+                onClick={()=> window.open(suggestion.link, "_blank")}
+              >
+                Link
+              </Button>
               <Button
                 variant="contained"
                 onClick={() => this.schedule(suggestion)}

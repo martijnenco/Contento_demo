@@ -4,10 +4,8 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 
-/** Content imports **/
+/** Relative imports **/
 import Suggestions from './containers/suggestionComponent';
-
-/** Styling imports **/
 import './App.css';
 
 class App extends Component {

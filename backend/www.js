@@ -1,7 +1,10 @@
 #!/usr/bin/env node
-const app = require('./app');
+/** Module imports **/
 const debug = require('debug')('contento:server');
 const http = require('http');
+
+/** Relative imports **/
+const app = require('./app');
 
 /**
  * Get port from environment and store in Express.

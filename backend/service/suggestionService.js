@@ -2,7 +2,7 @@ const https = require("https");
 
 const SuggestionService = {
   getSuggestions: async () => {
-    return await new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       const request = https.get('https://jsonplaceholder.typicode.com/posts', (response) => {
         // handle http errors
         if (response.statusCode < 200 || response.statusCode > 299) {
@@ -18,7 +18,7 @@ const SuggestionService = {
 
       // handle connection errors of the request
       request.on('error', (err) => reject(err))
-    });
+    })
   }
 };
 

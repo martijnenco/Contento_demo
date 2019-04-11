@@ -1,7 +1,5 @@
 Contento app
 
-
-
 To install the app:
 -----------------
 To install the backend
@@ -14,7 +12,7 @@ To install the frontend
 To start the app:
 -----------------
 ###### `cd backend/`
-##### `npm start`
+###### `npm start`
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ###### `cd frontend/`
