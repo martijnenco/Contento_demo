@@ -1,3 +1,5 @@
+This app was a code demo for a company on angel.co.
+
 Contento app
 
 To install the app:
